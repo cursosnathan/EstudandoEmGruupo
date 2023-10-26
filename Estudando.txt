@@ -15,6 +15,8 @@ git config core.editor = mostra o editor (ide) que está como padrão no sistema
 
 git config --global core.editor "endero .exe do editor" = para alterar o editor padrão. 
 
+git log --oneline - log mostrando somento o comentario.
+
 clear = limpa seu terminal.
 
 pwd -  mostra o local atual dentro do terminal.
@@ -29,6 +31,7 @@ touch (nome do arquivo) = cria um arquivo.
 
 touch (diretorio)/(nome do arquivo) = cria um arquivo dentro do diretorio(pasta)
 
+git commit -am "mensagem" = adiciona e comita ao mesmo tempo.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -61,8 +64,21 @@ git add . - adiciona todas as alterações para serem commitadas
 
 git commit -m ("Titulo") - commita(salva) em uma branch.
 
-git log  - exibe o histórico dos commits
+git log  - exibe o histórico dos commits e mostra o (hash) de caada um.
 
+git log --oneline - log mostrando somento o comentario.
+
+git diff - serve para fazer uma revisão e visualizar as mudanças antes de fazer um commit
+
+git reset HEAD (nome do aqruivo ) -
+
+git checkout (hash) - retorna o codigo para versão anterior / funciona igual control z 
+
+git checkout master - retorna para a versão do commit antes do chekout.
+
+git checkout (hash) - retorna o codigo para versão anterio / funciona igual control z (antes do add e commit)
+
+git reset --hard (hash) - reseta o codigo após git add/ git commit, porém não depois do git push
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //repositio online
@@ -76,24 +92,15 @@ git remote (remote name) (url) - para adicionar uma nova conexão(repositorio on
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-//comandos para reset/delete
-git checkout - funciona igual control z (antes do add e commit)
-
-git reset --hard origin/main - reseta o codigo após git add/ git commit, porém não depois do git push
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-//enviando para o repositorio as alterações
-git push (remote-name) (Branch-name) - enviar as alteraçoes de uma branch para ela mesma no repositorio online
-
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 //fecht
 git fetch (remote-name) - busca as diferenças dentro de uma mesma branch do repositorio online para o repositorio local sem alterar(fazer o merge) a branch
 
 git fetch (remote-name) (Branch-name) -  mostra as diferenças acima citadas porem em uma unica branch 
+
+
+//push
+git push (remote-name) (Branch-name) - enviar as alteraçoes de uma branch para ela mesma no repositorio online
 
 
 //pull
@@ -120,12 +127,14 @@ git merge sempre vai "puxar" o conteúdo para a branch em que está no momento
 
 
 //stash
-git stash - retorna a branch para o estado inicial da "main", no último save do commit ( backup ) 
+git stash - salva modificções sem precisar dar o commit / retorna a branch para o estado inicial da "main", no último save do commit ( backup ) 
 
-git stash list - retorna o stash salvo
+git stash list - retorna os stashs salvos
 
-git stash apply {} - seleciona a stash e faz o backup. 
+git stash save "mensagem de descrição" - coloca uma descrição para as stashs 
 
-git stash show -p nome - mostra as modificações na stash chamada.
+git stash apply {numero da stash} - seleciona a stash que esta salva para ser aplicada.
+
+git stash show -p nome - mostra um comparativo de modificações das stashs.
 
 
