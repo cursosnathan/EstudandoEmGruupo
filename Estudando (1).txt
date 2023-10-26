@@ -1,0 +1,94 @@
+U - untracked
+M - modified
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//clonar um repositorio para a maquina local ( deve ser feito no cmd em uma pasta já criada )
+
+git clone <URL> - ( todos os arquivos, inclusive a pasta )
+
+git clone <URL> . - ( somente os arquivos de pasta )
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Comandos basicos
+
+git init - inicia
+
+git status - apresenta o status atual dos arquivos
+
+git add (nome) - adiciona a alteração para ser commitada
+
+git add . - adiciona todas as alterações para serem commitadas 
+
+git commit -m ("Titulo") - commita(salva) em uma branch.
+
+git log  - exibe o histórico dos commits
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//repositio online
+git remote add origin (url) - inicializar uma conexão
+
+git remote - para saber o nome do repositorio remoto (remote-name)
+
+get remote get-url (remote-name) - para pegar o url do repositorio
+
+git remote (remote name) (url) - para adicionar uma nova conexão(repositorio online) para o repositorio local que ja esta conectado a outro repositorio online
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//comandos para reset/delete
+git checkout - funciona igual control z (antes do add e commit)
+
+git reset --hard origin/main - reseta o codigo após git add/ git commit, porém não depois do git push
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//enviando para o repositorio as alterações
+git push (remote-name) (Branch-name) - enviar as alteraçoes de uma branch para ela mesma no repositorio online
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//fecht
+git fetch (remote-name) - busca as diferenças dentro de uma mesma branch do repositorio online para o repositorio local sem alterar(fazer o merge) a branch
+
+git fetch (remote-name) (Branch-name) -  mostra as diferenças acima citadas porem em uma unica branch 
+
+
+//pull
+git pull (remote-name) (branch-name) - incorpora mudanças de um repositório remoto para o branch local. É equivalente a git fetch seguido de git merge FETCH_HEAD.
+
+
+//branchs
+git branch - mostar as branchs criadas
+
+git checkout name - Troca de branchs
+
+git checkout -d "name" - Deleta a branch 
+
+git branch name - cria uma nova branch no repositorio local
+
+git checkout -b "name" - Cria e muda para a nova branch no repositorio local
+
+git branch -M (nome) - cria uma branch no repositorio online
+
+
+//merge
+git merge name - 
+git merge sempre vai "puxar" o conteúdo para a branch em que está no momento
+
+
+//stash
+git stash - retorna a branch para o estado inicial da "main", no último save do commit ( backup ) 
+
+git stash list - retorna o stash salvo
+
+git stash apply {} - seleciona a stash e faz o backup. 
+
+git stash show -p nome - mostra as modificações na stash chamada.
+
+
