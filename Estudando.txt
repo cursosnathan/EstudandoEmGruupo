@@ -3,8 +3,32 @@
 
 git version = mostra a versão git no seu sistema.
 
-git config -- 
-pwd -  mostra o local do arquivo ( termial )
+git config --global user.name "nome" = configura o nome de usuario git no seu sistema.
+
+git config --global user.email "email" = configura o email do usuario git no seu sistema.
+
+git config user.name = mostra o nome/usuario local do sistema.
+
+git config user.email = mostra o email local do sistema.
+
+git config core.editor = mostra o editor (ide) que está como padrão no sistema.
+
+git config --global core.editor "endero .exe do editor" = para alterar o editor padrão. 
+
+clear = limpa seu terminal.
+
+pwd -  mostra o local atual dentro do terminal.
+
+cd (local) = direciona o local que vc quer entrar no terminal. 
+
+ls = lista todos os arquivos e diretorios(pastas).
+
+mkdir (nome) = cria um novo diretorio(pasta)
+
+touch (nome do arquivo) = cria um arquivo.
+
+touch (diretorio)/(nome do arquivo) = cria um arquivo dentro do diretorio(pasta)
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
